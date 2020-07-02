@@ -202,8 +202,9 @@ if(isset($_SESSION['user'])){
         <?php if($nivel==0){
 
         }else{?>
-        
-        <a href="agregar_adopcion.php" class="btn btn-outline-danger brute">Adoptar <span class="icon-heart"></span></a>
+        <div class="container">
+        <a href="agregar_adopcion.php" href="#"class="btn btn-outline-danger">Adoptar <span class="icon-heart"></span></a>
+        </div>
         <?php }?>
     </div>
     <br><br><br>

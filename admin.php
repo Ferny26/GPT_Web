@@ -88,7 +88,9 @@ $mostrar1 = mysqli_fetch_array($result1);
         </div>
     </nav>
     <div class="full"></div>
+
     <br><br>
+    
     <div class="main_text">
         <h2 class="we text-center"><?php echo $usuario; ?> Bienvenid@ a G.P.T. <img src="Imagenes/hello.gif" alt=""> </h2>
         <p class="text-center">Aquí podras llevar el control de tus servicios. Este sistema te permitirá mantener todos los registros que hagas a través del tiempo. <br> Disfrutala!</p>

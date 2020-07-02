@@ -102,20 +102,20 @@ $data_4 = mysqli_fetch_array($result_4);
               <div class="col-4">
                   <div class="form-group">
                       <h5>Fecha Adopcion:</h5>
-                      <input name="fecha_adopcion" value="<?php echo $data_2['Fecha_Adopcion']?>"type="date" class="form-control">
+                      <input name="fecha_adopcion" value="<?php echo $data_2['Fecha_Adopcion']?>"type="date" class="form-control" required >
                   </div>
               </div>
                 <div class="col-4">
                     <div class="form-group">
                         <h5>Nombre del gato:</h5>
-                        <input name="nombre" type="text" value="<?php echo $data_3['Nombre']?>"class="form-control" placeholder="Ej: Michineitor">
+                        <input name="nombre" type="text" value="<?php echo $data_3['Nombre']?>"class="form-control" placeholder="Ej: Michineitor" required>
                     </div>
                 </div>
 
                 <div class="col-4">
                     <div class="form-group">
                         <h5>Fecha de nacimiento:</h5>
-                        <input name="fecha" type="date" value="<?php echo $data_3['Fecha_Nacimiento']?>"class="form-control">
+                        <input name="fecha" type="date" value="<?php echo $data_3['Fecha_Nacimiento']?>"class="form-control" required>
                     </div>
                 </div>
 
@@ -123,14 +123,15 @@ $data_4 = mysqli_fetch_array($result_4);
                 <div class="col-4">
                     <div class="form-group">
                         <h5>Peso <i>[KG]</i>:</h5>
-                        <input name="peso" type="number" value="<?php echo $data_3['Peso']?>"class="form-control">
+                        <input name="peso" type="number" value="<?php echo $data_3['Peso']?>"class="form-control" required>
                     </div>
                 </div>
 
                 <div class="col-4">
                     <div class="form-group">
                         <h5>Sexo <i>[Binario]</i>:</h5>
-                        <select name="sexo" id="" value="<?php echo $data_3['Sexo']?>"class="form-control">
+                        <select name="sexo" id="" class="form-control">
+                        <option selected value= "<?php echo $data3['Sexo'];?>"><?php echo $data3['Sexo'];?></option>
                             <option value="M">Macho</option>
                             <option value="H">Hembra</option>
                         </select>
@@ -141,6 +142,7 @@ $data_4 = mysqli_fetch_array($result_4);
                     <div class="form-group">
                         <h5>Procedencia:</h5>
                         <select name="procedencia" id="" value="<?php echo $data_3['Procedencia']?>" class="form-control">
+                        <option selected value= "<?php echo $data3['Procedencia'];?>"><?php echo $data3['Procedencia'];?></option>
                             <option value="Hogar">Hogar</option>
                             <option value="Feral">Feral</option>
                             <option value="Recien rescatado">Recien rescatado</option>
@@ -165,7 +167,7 @@ $data_4 = mysqli_fetch_array($result_4);
 <div class="col-4">
                 <div class="form-group">
                     <h5>Nombre:</h5>
-                    <input name="Nombres" type="text" class="form-control" value="<?php echo $data_4['Nombres']?>"placeholder="Ej: Claudia">
+                    <input name="Nombres" type="text" class="form-control" value="<?php echo $data_4['Nombres']?>"placeholder="Ej: Claudia" required>
                 </div>
               </div>
 
@@ -173,7 +175,7 @@ $data_4 = mysqli_fetch_array($result_4);
               <div class="col-4">
                 <div class="form-group">
                     <h5>Apellido Materno:</h5>
-                    <input name="ApellidoMaterno" type="text" class="form-control" value="<?php echo $data_4['Apellido_Materno']?>" placeholder="Ej: Ramirez">
+                    <input name="ApellidoMaterno" type="text" class="form-control" value="<?php echo $data_4['Apellido_Materno']?>" placeholder="Ej: Ramirez" >
                 </div>
               </div>
 
@@ -197,7 +199,7 @@ $data_4 = mysqli_fetch_array($result_4);
               <div class="col-4">
                 <div class="form-group">
                     <h5>Celular:</h5>
-                    <input name="Celular" type="text" class="form-control" value="<?php echo $data_4['Celular']?>"placeholder="Ej: 3336627736">
+                    <input name="Celular" type="text" class="form-control" value="<?php echo $data_4['Celular']?>"placeholder="Ej: 3336627736" required >
                 </div>
               </div>
               <div class="col-4">

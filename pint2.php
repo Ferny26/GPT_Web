@@ -104,6 +104,8 @@ while($data_2 = mysqli_fetch_array($result2)){
 </table>
 
 <br>
+<br>
+<br>
 <h4 class="we text-center">Gatos con Dueño</h4>
 
 
