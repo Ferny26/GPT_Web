@@ -104,8 +104,8 @@ h2.we{
   <thead class="thead-dark">
     <tr>
       <th scope="col">#</th>
-      <th scope="col">Cantidad de gatos macho</th>
-      <th scope="col">Cantidad de gatas hembra</th>
+      <th scope="col">Cantidad de machos</th>
+      <th scope="col">Cantidad de hembras</th>
       <th scope="col">Balance total</th>
     </tr>
   </thead>

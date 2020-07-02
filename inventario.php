@@ -7,16 +7,33 @@ if(isset($_SESSION['user'])){
     $query = "SELECT * FROM Usuarios WHERE Username = '{$user}'";
 	$result = mysqli_query($conexion, $query);
 	$data = mysqli_fetch_array($result, MYSQLI_ASSOC);
-        mysqli_free_result($result);
+        mysqli_free_result($result);   
 		if ($data==0) {
-            $username = $_SESSION['user'];
-            $password= $_SESSION['pass'];
-            $conexion = mysqli_connect('localhost',$username,$password,'GPT') or die ( header("Location: index.php"));
-            include("includes/conexion.php");
-}
+        $username = $_SESSION['user'];
+        $password= $_SESSION['pass'];
+        $conexion = mysqli_connect('localhost',$username,$password,'GPT') or die ( header("Location: index.php"));
+        include("includes/conexion.php");
+        $query2 = "SELECT Delete_priv FROM mysql.user WHERE user = '{$username}'";
+        $result2 = mysqli_query($conexion, $query2);
+        $data2 = mysqli_fetch_array($result2);
+        if($data2['Delete_priv']=='N'){
+        $query3 = "SELECT Update_priv FROM mysql.user WHERE user = '{$username}'";
+        $result3 = mysqli_query($conexion, $query3);
+        $data3 = mysqli_fetch_array($result3);
+            if($data3['Update_priv']=='N'){
+                $nivel = 0;
+            }else{
+                $nivel = 1;
+            }
+        }else{
+            $nivel = 2;
+        }
+	}else{
+        $nivel = $data['Nivel'];
+    }
 }else{
     header("location: index.php"); 
-}       
+}         
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -95,7 +112,13 @@ if(isset($_SESSION['user'])){
             <h1 class="display-4">Upps! </h1>
             <p class="lead">Parece que aún no agregaste material, intenta  agregar</p>
             <hr class="my-4">
-            <a href="#" data-target="#modalalumnos" data-toggle="modal" class="btn btn-outline-danger">Agregar material <span class="icon-beaker"></span></a>
+            <?php
+      if($nivel!=0){
+          ?>
+         <a href="#" data-target="#modalalumnos" data-toggle="modal" class="btn btn-outline-danger">Agregar material <span class="icon-beaker"></span></a>
+         <?php
+      }
+          ?>
         </div>
         <?php }else{ ?>
             <div class="row">
@@ -129,7 +152,16 @@ if(isset($_SESSION['user'])){
       <td><?php echo $mostrar['Categoria']; ?></td>
       <td><?php echo $mostrar['Presentacion']; ?></td>
       <td><?php echo $mostrar['Cantidad']; ?></td>
-      <td><a href="borrar_material.php?ID=<?php echo $mostrar['ID_Material']; ?>"><button type="button" class="btn btn-outline-danger"><span class="icon-scissors"></span></button></a></td>
+      <?php
+      if($nivel!=2){
+          ?>
+        <td><a>
+        <?php
+      }else{
+        ?>
+     
+     <td><a href="borrar_material.php?ID=<?php echo $mostrar['ID_Material']; ?>"><button type="button" class="btn btn-outline-danger"><span class="icon-scissors"></span></button></a></td>
+      <?php }?>
     </tr>
   
                 <?php } ?>
@@ -144,8 +176,14 @@ if(isset($_SESSION['user'])){
         }    
         ?>
         <br>
+        <?php
+      if($nivel!=0){
+          ?>
         <a href="#" data-target="#modalalumnos" data-toggle="modal" class="btn btn-outline-success">Agregar material <span class="icon-beaker"></span></a>
-    </div>
+        <?php
+      }
+          ?>
+   </div>
     <br><br><br>
 
     <div class="modal fade" id="modalalumnos" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

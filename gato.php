@@ -67,11 +67,7 @@ if(isset($_GET['ID'])){
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#"><span class="icon-laptop"></span> Inicio</a>
-                    </li>
-                    <!-- DROPDOWN -->
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><span class="icon-chat"></span> Contacto</a>
+                        <a href="admin.php"class="nav-link" href="#"><span class="icon-laptop"></span> Inicio</a>
                     </li>
                     <!-- DROPDOWN PRUEBAS -->
                     <li class="nav-item">
@@ -79,9 +75,6 @@ if(isset($_GET['ID'])){
                         <!-- TEST MODAL WINDOW -->
                         
                     </li>
-                    <!-- SEARCH ICON -->
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><span class="icon-telescope btn-modal" data-toggle="modal" data-target="#fsModal"></span></a>
                 </ul>
             </div>
         </div>

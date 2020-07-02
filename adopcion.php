@@ -21,7 +21,7 @@ if(isset($_SESSION['user'])){
         $query3 = "SELECT Update_priv FROM mysql.user WHERE user = '{$username}'";
         $result3 = mysqli_query($conexion, $query3);
         $data3 = mysqli_fetch_array($result3);
-            if($data2['Update_priv']=='N'){
+            if($data3['Update_priv']=='N'){
                 $nivel = 0;
             }else{
                 $nivel = 1;
@@ -130,8 +130,8 @@ if(isset($_SESSION['user'])){
    <th scope="col">Procedencia</th>
    <th scope="col">Nombre de Adoptante</th>
    <th scope="col">Fecha de Adopción</th>
-   <th scope="col">Borrar</th>
    <th scope="col">Editar</th>
+   <th scope="col">Eliminar</th>
    <th scope="col"></th>
  </tr>
 </thead>
@@ -184,10 +184,11 @@ if(isset($_SESSION['user'])){
                   <td><?php echo $NombreAdoptante; ?></td>
                   <td><?php echo $FechaAdopcion; ?></td>
                   <?php if($nivel==2){?>
+                  <td><a href="editar_adopcion.php?ID=<?php echo $data_2['ID_Adopcion'];?>"type="button" class="btn btn-outline-primary"><span class="icon-tools"></span></button></a>
                   <td><a href="eliminar_adopcion.php?ID=<?php echo $data_2['ID_Adopcion'];?>"><button type="button" class="btn btn-outline-danger"><span class="icon-scissors"></span></button></a>
-                  <td><a href="editar_adopcion.php?ID=<?php echo $data_2['ID_Adopcion'];?>"type="button" class="btn btn-outline-primary"><span class="icon-tools"></span></button></a>
                   <?php }if($nivel==1){?>
-                  <td><a href="editar_adopcion.php?ID=<?php echo $data_2['ID_Adopcion'];?>"type="button" class="btn btn-outline-primary"><span class="icon-tools"></span></button></a>
+                    <td><a href="editar_adopcion.php?ID=<?php echo $data_2['ID_Adopcion'];?>"type="button" class="btn btn-outline-primary"><span class="icon-tools"></span></button></a>
+                    <td><a>
                   <?php }if($nivel==0){}?>
               </tr>
               <?php }?>

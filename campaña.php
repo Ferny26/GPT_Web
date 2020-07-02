@@ -20,7 +20,7 @@ if(isset($_SESSION['user'])){
         $query3 = "SELECT Update_priv FROM mysql.user WHERE user = '{$username}'";
         $result3 = mysqli_query($conexion, $query3);
         $data3 = mysqli_fetch_array($result3);
-            if($data2['Update_priv']=='N'){
+            if($data3['Update_priv']=='N'){
                 $nivel = 0;
             }else{
                 $nivel = 1;
@@ -227,6 +227,7 @@ $data_campana = mysqli_fetch_array($result_campaa);
                     }
                     if($nivel == 1){
                     ?>
+                    <td><a>
                      <td><a href="editar_accion.php?ID=<?php echo $IDGato; ?>&IDID=<?php echo $IDID;?>"type="button" class="btn btn-outline-primary"><span class="icon-tools"></span></button>
                      <?php
                     }
