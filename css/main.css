@@ -1,0 +1,512 @@
+/* INCLUDES */
+
+@import url("subindex/buy.css");
+@import url("subindex/team.css");
+@import url("subindex/pay.css");
+
+
+
+/*AÑADIR ESTILOS GENERALES [*] */
+
+*{
+  font-family: 'Barlow Condensed', sans-serif;
+}
+
+h2.we{
+  font-family: 'Sirin Stencil', cursive;
+}
+
+.t-w{
+    color: white;
+}
+
+.t-b{
+    color: black;
+}
+
+
+.t-lg {
+    font-size: 20px;
+}
+
+.navbar {
+    background:rgba(127, 45, 247, .7);
+}
+
+.navbar .nav-item .nav-link {
+    color: #FFF
+}
+
+.modal-backdrop{
+    z-index: 10;
+}
+
+.logo-temp {
+    font-size: 35px;
+}
+
+/* .main {
+    margin-top: 75px;
+} */
+
+.navimg{
+  width: 55px;
+}
+
+
+.main .we p {
+    text-align: justify;
+    font-size: 17px;
+    letter-spacing: 1px;
+}
+
+.main .weimg {
+    background-image: url(../img/main.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 300px;
+}
+
+.button {
+	background:#546de5;
+	color:#fff;
+	display:inline-block;
+	font-size:1.25em;
+	padding:10px 0;
+	text-align:center;
+	width:200px;
+    text-decoration:none;
+    margin-top: 20px;
+}
+
+.navbar li a {
+  font-size: 20px;
+}
+
+.navbar a.logo {
+  font-size: 30px;
+}
+
+p.much{
+  font-size: 17px;
+}
+ 
+.button span {
+	margin-right:10px;
+}
+
+
+
+a.buy{
+  background: #1B1464;
+}
+
+.button:hover {
+    box-shadow:0px 0px 0px;
+    color:#fff;
+	display:inline-block;
+	font-size:1.25em;
+	padding:10px 0;
+	text-align:center;
+	width:200px;
+    text-decoration:none;
+    animation-name: shake;
+}
+
+.animated {
+    animation-fill-mode: both;
+    animation-duration: 1s;
+}
+
+.hover:hover{
+  color:#fff;
+  text-decoration: none;
+}
+
+.main_text h2{
+  font-size: 35px;
+}
+
+.main_text p{
+  font-size: 20px;
+}
+
+
+.main_text_lg p.wr{
+  font-size: 20px;
+}
+
+
+.main_text_lg h2{
+  font-size: 45px;
+}
+
+.main_text_lg p{
+  font-size: 30px;
+}
+
+.est_img{
+  width: 250px;
+}
+
+.est_img2{
+  width: 200px;
+}
+
+kbd.nom {
+  font-family: Niagara Engraved;
+}
+
+@keyframes shake {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    10%, 30%, 50%, 70%, 90% {
+        transform: translateY(-10px);
+    }
+    20%, 40%, 60%, 80% {
+        transform: translateY(10px);
+    }
+}
+
+
+@keyframes shakes {
+  0%, 100% {
+      transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+      transform: translateX(-10px);
+  }
+  20%, 40%, 60%, 80% {
+      transform: translateX(10px);
+  }
+}
+
+
+
+hr {
+    margin-top: 50px;
+}
+.tiped{
+  font-family: 'Sirin Stencil', cursive;
+}
+
+
+
+/* h3.contact {
+    text-decoration: underline;
+} */
+
+
+.input-group input{
+    border-radius: 0;
+}
+.input-group button{
+    border-radius: 0;
+}
+
+
+.btn-outline-danger{
+  color:rgba(127, 45, 247, .7);
+  border-color:rgba(127, 45, 247, .7) ;
+}
+
+
+.btn-outline-danger:hover{
+  color: #FFF;
+  background: rgba(127, 45, 247, .7);
+  border-color:rgba(127, 45, 247, .7) ;
+  animation: shake 1s;
+}
+
+.ful{
+  background-image: url(../Imagenes/banner.jpg);
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  
+}
+
+
+.btn-outline-secondary:hover{
+  animation: shakes 1s;
+}
+
+
+.on{
+  position: absolute; 
+  left: 0; 
+  right: 0; 
+  margin-left: auto; 
+  margin-right: 0; 
+  width: 100px;
+}
+
+
+.cen{
+  width: 60px;
+  height: 60px;
+  background-color: rgba(0, 0, 0, .8);
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+  position: relative;
+  
+}
+
+.cen:hover{
+  animation: shakes 1s;
+}
+
+
+a.one {
+  text-align: center;
+  text-decoration: none;
+  color: #FFF;
+  font-size: 25px;
+}
+
+a.one:hover{
+  text-align: center;
+  text-decoration: none;
+  color: #FFF;
+  font-size: 25px;
+}
+
+
+/* ANIMATED DROPDOWN STYLES */
+@media (min-width: 992px) {
+    .animate {
+      animation-duration: 0.3s;
+      -webkit-animation-duration: 0.3s;
+      animation-fill-mode: both;
+      -webkit-animation-fill-mode: both;
+    }
+  }
+  
+  @keyframes slideIn {
+    0% {
+      transform: translateY(1rem);
+      opacity: 0;
+    }
+    100% {
+      transform:translateY(0rem);
+      opacity: 1;
+    }
+    0% {
+      transform: translateY(1rem);
+      opacity: 0;
+    }
+  }
+  
+  @-webkit-keyframes slideIn {
+    0% {
+      -webkit-transform: transform;
+      -webkit-opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateY(0);
+      -webkit-opacity: 1;
+    }
+    0% {
+      -webkit-transform: translateY(1rem);
+      -webkit-opacity: 0;
+    }
+  }
+  
+  .slideIn {
+    -webkit-animation-name: slideIn;
+    animation-name: slideIn;
+  }
+
+
+
+
+
+  /* MODAL */
+
+
+.search {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.search-dialog {
+  position: fixed;
+  margin: 0;
+  min-width: 100%;
+  height: 100%;
+  padding: 0;
+}
+
+.search-content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 0;
+  box-shadow: none;
+   background:rgba(0,0,0,.8);
+}
+
+.search-body {
+  position: absolute;
+  top: 50px;
+  bottom: 60px;
+  width: 100%;
+  font-weight: 300;
+  overflow: auto;
+
+}
+
+
+/* SLIDESHOW STYLES */
+
+section {
+    width: 100%;
+    height: 100vh;
+  }
+  
+  .swiper-container {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    overflow: hidden;
+  }
+  .slide-image {
+    position: absolute;
+    top: -200px;
+    left: -200px;
+    width: calc(100% + 400px);
+    height: calc(100% + 400px);
+    background-position: 50% 50%;
+    background-size: cover;
+  }
+  .slide-title {
+    font-size: 4rem;
+    line-height: 1;
+    max-width: 50%;
+    white-space: normal;
+    word-break: break-word;
+    /* color: #FFF; */
+    z-index: 100;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    font-weight: normal;
+  }
+  @media (min-width: 45em) {
+    .slide-title {
+      font-size: 7vw;
+      max-width: none;
+    }
+  }
+  .slide-title span {
+    white-space: pre;
+    display: inline-block;
+    opacity: 0;
+  }
+  
+  .slideshow {
+    position: relative;
+  }
+  .slideshow-pagination {
+    position: absolute;
+    bottom: 5rem;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    transition: .3s opacity;
+    z-index: 10;
+  }
+  .slideshow-pagination-item {
+    display: flex;
+    align-items: center;
+  }
+  .slideshow-pagination-item .pagination-number {
+    opacity: 0.5;
+  }
+  .slideshow-pagination-item:hover, .slideshow-pagination-item:focus {
+    cursor: pointer;
+  }
+  .slideshow-pagination-item:last-of-type .pagination-separator {
+    width: 0;
+  }
+  .slideshow-pagination-item.active .pagination-number {
+    opacity: 1;
+  }
+  .slideshow-pagination-item.active .pagination-separator {
+    width: 10vw;
+  }
+  .slideshow-navigation-button {
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 5rem;
+    z-index: 1000;
+    transition: all .3s ease;
+    color: #FFF;
+  }
+  .slideshow-navigation-button:hover, .slideshow-navigation-button:focus {
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.5);
+  }
+  .slideshow-navigation-button.prev {
+    left: 0;
+  }
+  .slideshow-navigation-button.next {
+    right: 0;
+  }
+  
+  .pagination-number {
+    font-size: 1.8rem;
+    color: #fff;
+    font-family: 'Oswald', sans-serif;
+    padding: 0 0.5rem;
+  }
+  
+  .pagination-separator {
+    display: none;
+    position: relative;
+    width: 40px;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.25);
+    transition: all .3s ease;
+  }
+  @media (min-width: 45em) {
+    .pagination-separator {
+      display: block;
+    }
+  }
+  .pagination-separator-loader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #FFFFFF;
+    transform-origin: 0 0;
+  }
